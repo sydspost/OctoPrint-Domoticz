@@ -253,7 +253,7 @@ class domoticzPlugin(
         self._domoticz_logger.debug("Checking status of %s index %s." % (plugip, plugidx))
         if plugip != "":
             try:
-                strURL = "http://" + plugip + "/json.htm?type=devices&rid=" + str(plugidx)
+                strURL = "http://" + plugip + "/json.htm?type=command&param=getdevices&rid=" + str(plugidx)
                 if username != "":
                     strURL = (
                         strURL
